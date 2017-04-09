@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--<html ng-app="app" ng-controller="main_controller" manifest="penguine.appcache">-->
+<html ng-app="app" ng-controller="main_controller">
+
+
+
+
+
+
+
+<head>
+    <title> {{page.title()}} </title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="src/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/css/styles.css">
+
+    <script src="src/js/jquery-3.2.1.js"></script>
+    <script src="src/js/angular.js"></script>
+    <script src="src/js/angular-route.js"></script>
+    <script src="src/js/localforage.js"></script>
+    <script src="src/js/angular-localForage.js"></script>
+    <script src="src/js/app.js"></script>
+</head>
+
+<body>
+    <span class="web_header">{{web_heading}}</span>
+    <button type="button" ng-click="show_img=!show_img" class="btn btn-default">Toggle Penguins!</button>
+    {{myName}}
+    <img ng-show="show_img" ng-src="{{offline_img}}">
+</body>
+
+</html>
